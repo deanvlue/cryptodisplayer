@@ -37,15 +37,24 @@ class Today extends Component {
         <h2>Current Price</h2>
         <div className="columns today--section__box">
           <div className="column btc--section">
-            <h5>${this.state.btcprice}</h5>
+            <h5>{new Intl.NumberFormat('en-US', {
+              style:'currency',
+              currency:'USD'
+            }).format(this.state.btcprice)}</h5>
             <p>1 BTC</p>
           </div>
           <div className="column ltc--section">
-            <h5>${this.state.ltcprice}</h5>
+            <h5>{new Intl.NumberFormat('en-US', {
+              style:'currency',
+              currency:'USD'
+            }).format(this.state.ltcprice)}</h5>
             <p>1 LTC</p>
           </div>
           <div className="column eth--section">
-            <h5>${this.state.ethprice}</h5>
+            <h5>{new Intl.NumberFormat('en-US', {
+              style:'currency',
+              currency:'USD'
+            }).format(this.state.ethprice)}</h5>
             <p>1 ETH</p>
           </div>
         </div>
